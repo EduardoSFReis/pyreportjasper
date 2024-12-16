@@ -368,6 +368,11 @@ class Report:
         res = self.String(output_stream_pdf.toByteArray(), 'UTF-8')
         return bytes(str(res), 'UTF-8')
     
+    def export_pdf_bytes(self):
+        output_stream_pdf = self.get_output_stream_pdf()
+        pdf_bytes = output_stream_pdf.toByteArray()  
+        return pdf_bytes
+    
     def export_pdf(self):
         output_stream = self.get_output_stream('.pdf')
         output_stream_pdf = self.get_output_stream_pdf()

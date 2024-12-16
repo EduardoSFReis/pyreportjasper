@@ -37,7 +37,8 @@ class PyReportJasper:
         'csv_meta',
         'ods',
         'pptx',
-        'jrprint'
+        'jrprint',
+        'pdf_bytes'
     )
 
     METHODS = ('GET', 'POST', 'PUT')
@@ -164,6 +165,7 @@ class PyReportJasper:
                 try:
                     formats_functions = {
                         'pdf': report.export_pdf,
+                        'pdf_bytes': report.export_pdf_bytes,
                         'html': report.export_html,
                         'rtf': report.export_rtf,
                         'docx': report.export_docx,
@@ -181,7 +183,7 @@ class PyReportJasper:
                     for f in self.config.outputFormats:
                         export_function = formats_functions.get(f)
                         if export_function:
-                            export_function()
+                            data = export_function()
                         else:
                             raise NameError("Error output format {} not implemented!".format(f))
                 except Exception as ex:
@@ -192,7 +194,7 @@ class PyReportJasper:
             error = NameError('Error: not a file: {}'.format(self.config.input))
         if error:
             raise error
-        return True
+        return data
 
     def list_report_params(self):
         report = Report(self.config, self.config.input)
