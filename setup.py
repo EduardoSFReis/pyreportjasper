@@ -2,6 +2,7 @@
 # GNU GENERAL PUBLIC LICENSE
 #
 # 2023 Jadson Bonfim Ribeiro <contato@jadsonbr.com.br>
+# Versão alterada 2024 Eduardo Soares <edufrancoreis@hotmail.com>
 #
 from setuptools import setup, find_packages
 import io
@@ -35,7 +36,7 @@ def get_version(package):
 
 
 setup(
-    name='pyreportjasper',
+    name='pyreportjasperbytes',
     version=get_version('pyreportjasper'),
     url='https://github.com/acesseonline/pyreportjasper',
     download_url='https://pypi.python.org/pypi/pyreportjasper/' + get_version('pyreportjasper'),
@@ -45,10 +46,10 @@ setup(
         ('Issue tracker', 'https://github.com/acesseonline/pyreportjasper/issues'),
     )),
     license='GPLv3',
-    author='Jadson Bonfim Ribeiro',
-    author_email='contato@jadsonbr.com.br',
-    maintainer='Jadson Bonfim Ribeiro',
-    maintainer_email='contato@jadsonbr.com.br',    
+    author='Eduardo Soares Franco Reis',
+    author_email='edufrancoreis@hotmail.com',
+    maintainer='Eduardo Soares Franco Reis',
+    maintainer_email='edufrancoreis@hotmail.com',    
     keywords='report jasper python',
     description='This package aims to be a solution to compile and process '
                 'JasperReports (.jrxml & .jasper files).',
