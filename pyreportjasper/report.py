@@ -332,6 +332,10 @@ class Report:
     # Métodos de exportação - todos retornam bytes
     # =========================================================================
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     def export_pdf(self):
         """Retorna o arquivo PDF em bytes."""
         output_stream = self.ByteArrayOutputStream()
