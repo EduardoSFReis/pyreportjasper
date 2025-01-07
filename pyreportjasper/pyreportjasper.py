@@ -39,7 +39,6 @@ class PyReportJasper:
         'ods',
         'pptx',
         'jrprint',
-        'pdf_bytes'
     )
 
     METHODS = ('GET', 'POST', 'PUT')
@@ -166,7 +165,6 @@ class PyReportJasper:
                 try:
                     formats_functions = {
                         'pdf': report.export_pdf,
-                        'pdf_bytes': report.export_pdf_bytes,
                         'html': report.export_html,
                         'rtf': report.export_rtf,
                         'docx': report.export_docx,
